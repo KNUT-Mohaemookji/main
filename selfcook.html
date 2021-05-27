@@ -1,0 +1,148 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="selfcook.css">
+    <link rel="stylesheet" href="https://fonts.google.com/specimen/Gugi#standard-styles">
+    <title>Self Cook Studio</title>
+    <script src="https://kit.fontawesome.com/7a9cd52613.js" crossorigin="anonymous">
+    </script>
+</head>
+<body>  
+    <div style="width: 1450px; height: 800px;"> 
+        <!--전체를 div로 묶어서 상하좌우 위치를 지정해주면 화면이 줄어도 밀림 현상이 일어나지 않는다.-->
+        <header style="height: 150px">
+            <!--상단 메뉴바-->
+            <nav class = "navbar">
+                <div class = "navbar_logo">
+                    <i class="fas fa-cookie"></i>
+                    <a href="selfcook.html">모해묵지?!</a>
+                </div>
+                <ul class = "navbar_menu">
+                    <li class = "menu_bar"><a href="">Self Cook</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                    <li class = "menu_bar"><a href="">식당 추천</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                    <li class="menu_bar"><a href="">자유 게시판</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                    <li class = "menu_bar"><a href="">이벤트</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                </ul>
+                <div class = "navbar_icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100005491660570"><i class="fab fa-facebook"></i></</a></li>
+                        <li><a href="https://www.instagram.com/jgy_98/"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </nav>  
+        </header>
+        <aside style="position: relative; width: 70%; height: 150%;float: left;">
+            <!--검색 창-->
+            <div class = "slide">
+                <ul>
+                    <li><a href="#"><img style="width: 500px; height: 300px;" src="image/cook1.jpeg" alt="요리1"></a></li>
+                    <li><a href="#"><img style="width: 500px; height: 300px;" src="image/cook2.jpeg" alt="요리2"></a></li>
+                    <li><a href="#"><img style="width: 500px; height: 300px;" src="image/cook3.jpeg" alt="요리3"></a></li>
+                    <li><a href="#"><img style="width: 500px; height: 300px;" src="image/cook4.jpeg" alt="요리4"></a></li>
+                </ul>
+            </div>  
+            <div class="search-box"> <!--위로 옮기면 슬라이드 이동 시 작동이 안됨.-->
+                <input type="text" class="search-txt" name=""placeholder="search">
+                <a class="search-btn" href="#">
+                <i class="fas fa-search"></i>
+                </a>
+            </div>
+            <div class = "cook_menu">
+                <div><a href="rice.html"><img class="cook1" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook1.jpeg" alt="밥"></a></div>
+            
+                <div><a href="noodle.html"><img class="cook2" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook2.jpeg" alt="면"></a></div>
+                <div><a href="meet.html"><img class="cook3" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></a></div>
+                <div><img class="cook4" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook4.jpeg" alt="음료"></div>
+                <div><img class="cook5" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook5.jpeg" alt="고기"></div>
+                <div><img class="cook6" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook6.jpeg" alt="고기"></div>
+                <div><img class="cook7" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                        onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></div>
+                <div><img class="cook8" style = "opacity: 1.0;" onmousemove="this.style.opacity = '0.5'"
+                    onmouseout="this.style.opacity = '0.8'" src="image/cook3.jpeg" alt="고기"></div>
+            </div>
+        </aside>
+        <section style="position: relative; height: 150%; width: 30%; float: left;">
+            <div class="popular_recipe">
+                <h2><i><a href="popular_recipe.html">+ 인기 레시피</a></i></h2>
+                ---------------------------------------------------
+                <ul>
+                    <li><u>레시피 1</u></li>
+                    <li><u>레시피 2</u></li>
+                    <li><u>레시피 3</u></li>
+                    <li><u>레시피 4</u></li>
+                    <li><u>레시피 5</u></li>
+                    <li><u>레시피 6</u></li>
+                    <li><u>레시피 7</u></li>
+                    <li><u>레시피 8</u></li>
+                    <li><u>레시피 9</u></li>
+                    <li><u>레시피 10</u></li>
+                </ul>
+            </div>
+            <div class="popular">
+                <h2><i><a href="popular.html"> + 최근 많이 읽은 글</a></i></h2>
+                ---------------------------------------------------
+                <ul>
+                    <li>인기 글 1</li>
+                    <li>인기 글 2</a></li>
+                    <li>인기 글 3</a></li>
+                    <li>인기 글 4</a></li>
+                    <li>인기 글 5</a></li>
+                    <li>인기 글 6</a></li>
+                    <li>인기 글 7</a></li>
+                    <li>인기 글 8</a></li>
+                    <li>인기 글 9</a></li>
+                    <li>인기 글 10</a></li>
+                </ul>
+            </div>
+        </section>
+        <footer style="height: 130px; width: 1450px; clear: both;">
+            <p style="float: left;font-size: 20px;"> 사이트 이미지</p>
+            <p style="float: left;font-size: 20px;"> 페이지 소개</p>
+            <div class = "navbar_icons2">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100005491660570"><i class="fab fa-facebook"></i></</a></li>
+                    <li><a href="https://www.instagram.com/jgy_98/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+<script src="slide(auto).js"></script>
+</body>
+</html>

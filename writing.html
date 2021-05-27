@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="writing.css">
+    <link rel="stylesheet" href="<link rel="stylesheet" href="https://fonts.google.com/specimen/Gugi#standard-styles">
+    <script src="https://kit.fontawesome.com/7a9cd52613.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div style="height: 900px;width: 1450px;">
+        <header style="height: 150px">
+            <!--상단 메뉴바-->
+            <nav class = "navbar">
+                <div class = "navbar_logo">
+                    <i class="fas fa-cookie"></i>
+                    <a href="selfcook.html">모해묵지?!</a>
+                </div>
+                <ul class = "navbar_menu">
+                    <li class = "menu_bar"><a href="">Self Cook</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                    <li class = "menu_bar"><a href="">식당 추천</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                    <li class="menu_bar"><a href="">자유 게시판</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                    <li class = "menu_bar"><a href="">이벤트</a>
+                        <ul class = "dropdown">
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                            <li>submenu</li>
+                        </ul></li>
+                </ul>
+                <div class = "navbar_icons">
+                    <ul>
+                        <li><a href="https://www.facebook.com/profile.php?id=100005491660570"><i class="fab fa-facebook"></i></</a></li>
+                        <li><a href="https://www.instagram.com/jgy_98/"><i class="fab fa-instagram"></i></a></li>
+                    </ul>
+                </div>
+            </nav>  
+        </header>
+        <section style = "width : 80%; height : 700px; margin-top: 2%;margin-left: 10%;">
+            <fieldset>
+                <legend>게시판 글쓰기 양식</legend>
+                <form action="selfcook.html">
+                    <p class = "title">
+                        <input type="text", name = "title" placeholder="제목" class = "textbox">   
+                    </p>
+                    <p class = "option">
+                            <input type="text" placeholder="요리 Title ex) 밥요리" menulist name = "menulist" list = "menulist">
+                            <datalist id = "menulist">
+                                <option value="밥"></option>
+                                <option value="고기"></option>
+                                <option value="면"></option>
+                                <option value="야식"></option>
+                                <option value="을료"></option>
+                            </datalist>
+                    </p>
+                    <p class = content>
+                        <textarea name="content"cols = "100" rows = "30" placeholder = "내용을 입력하세요."></textarea>    
+                    </p>
+                    <a href="selfcook.html"><input type="submit" value="게시" class="submit"></a>
+                </form>
+            </fieldset>
+        </section>
+        <aside>
+
+        </aside>
+        <footer style="height: 120px;">
+            <p style="float: left;font-size: 20px;"> 사이트 이미지</p>
+            <p style="float: left;font-size: 20px;"> 페이지 소개</p>
+            <div class = "navbar_icons2">
+                <ul>
+                    <li><a href="https://www.facebook.com/profile.php?id=100005491660570"><i class="fab fa-facebook"></i></</a></li>
+                    <li><a href="https://www.instagram.com/jgy_98/"><i class="fab fa-instagram"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
