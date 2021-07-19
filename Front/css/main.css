@@ -5,6 +5,7 @@ body{
 }
 header{
     height: 120px;
+    overflow: auto;
     left: 1px;
     top: 1px;
     width: 100%;
@@ -69,7 +70,8 @@ input{
     display: flex;
     bottom: 0;
     top: 15px;
-    margin: auto 10px;
+    margin: auto;
+    /* margin: auto 10px; */
 }
 header .inner .menu .logo > a{
     position: absolute;

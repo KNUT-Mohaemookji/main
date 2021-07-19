@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <!--FAVICON-->
     <link rel="shortcut icon" href="./favicon.ico" type="images/x-icon">
-    <link rel="stylesheet" href="../css/VideoList.css">    
+    <link rel="stylesheet" href="../css/VideoList.css">  
     
 </head>
 <body>
@@ -42,7 +42,7 @@
                     </div>
                 </ul>
                 <!--메인메뉴-->
-                <ul class = "main-menu">
+                <!-- <ul class = "main-menu">
                     <div class="menu-list">
                         Menu1
                         <ul>
@@ -88,7 +88,7 @@
                             <li class = "inner-menu"><a href="javascript:void(0)">menu1-1</a></li>
                         </ul>
                     </div>
-                </ul>
+                </ul> -->
             </div>
         </div>
     </header>
@@ -181,6 +181,38 @@
             <span class="close">&times;</span>                                                               
             <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
         </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="https://www.youtube.com/watch?v=3HmxP0XcoaY" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
+        <div class="modal-content">
+            <span class="close">&times;</span>                                                               
+            <iframe width="750" height="450" src="http://www.youtube.com/embed/pPb2lIap6Es?rel=0" frameborder="0" allowfullscreen></iframe>
+        </div>
     </div>
 
     <!--FOOTER-->
@@ -205,28 +237,36 @@
             </ul>
         </div>
     </footer>
+    <script>
+        const modal = document.getElementById('myModal');
+        // Get the button that opens the modal
+        // const btn = document.querySelector('.Video .thumbnail')
+        [...document.querySelectorAll('.Video')].forEach(function(item){
+            item.addEventListener('click', function(){
+                modal.style.display = "block",
+                modal.style.position = "fixed"
+            });
+        })
+        // Get the <span> element that closes the modal                                        
+        // const btns = btn.length;
+        // for(var i = 0; i < btns; i++){
+        //     btns[i] = addEventListener('click', function(){
+        //         i++,
+        //         btns[i] = modal.style.display = "block",
+        //         modal.style.position = "fixed"
+        //     })
+        // // }
+        // btns = btn.forEach(function(ele){
+        //     if(ele.target == modal){
+        //         modal.style.display = "block";
+        //     }
+        // })
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+    </script>
 </body>
 </html>
-
-<script>
-        // Get the modal
-
-const modal = document.getElementById('myModal');
-// Get the button that opens the modal
-var btn = document.getElementsByClassName("Video");
-// Get the <span> element that closes the modal                                        
-const btns = btn.length;
-for(var i = 0; i < btns; i++){
-    btns[i] = addEventListener('click', function(){
-        btns[i] = modal.style.display = "block",
-        modal.style.position = "fixed"
-    })
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-</script>
