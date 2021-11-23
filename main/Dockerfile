@@ -1,7 +1,22 @@
-# Main Container
-FROM node:14.17.6
+# Build Image
+FROM node:14.17.6 AS builder
 COPY . /usr/local/mohaemookji
+
+# frontend library install and build
 WORKDIR /usr/local/mohaemookji/mh-frontend
-RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime
+RUN npm install && npm run build
+
+# main server library install and build
+WORKDIR /usr/local/mohaemookji/
+RUN npm install && npm run build
+
+
+# Main Container
+FROM alpine:edge
+# build file loading from builder image
+COPY --from=builder /usr/local/mohaemookji/dist /usr/local/mohaemookji
+RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
+    && apk add --update nodejs=16.13.0-r0 \
+    && apk add --update npm
 EXPOSE 17260
-ENTRYPOINT ["node", "/usr/local/mohaemookji/index.js"]
+ENTRYPOINT ["node", "/usr/local/mohaemookji/main.js"]
