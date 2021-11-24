@@ -55,7 +55,7 @@ a{
   border-radius: 10px;
 }
 .mainMenu a{
-  color: rgb(255, 194, 194);
+  color: rgb(110, 108, 108);
 }
 .mainMenu a:hover{
   color: #333;
@@ -66,5 +66,16 @@ ul, li{
 }
 a{
   text-decoration: none;
+}
+@media(max-width: 365px){
+  .mainMenus{
+    margin: 25px 10px;
+  }
+  .mainMenu{
+    margin: 5px;
+  }
+  .mainMenu a{
+    font-size: 12px;
+  }
 }
 </style>

@@ -1,15 +1,6 @@
 <template>
     <div>
         <div class="inner">
-            <h1 class="mainText">FrontEnd</h1>
-            <div class="frontEnd">
-                <img class="profile" src="https://avatars.githubusercontent.com/u/76980526?v=4" alt="">
-                <div class="introduce">
-                    <div class="name">JGY</div>
-                    <div class="email">jgy_98@naver.com</div>
-                    <div class="tel">010-2037-4553</div>
-                </div>
-            </div>
             <h1 class="mainText">BackEnd</h1>
             <div class="backEnd">
                 <div class="person">
@@ -37,9 +28,18 @@
                     </div>
                 </div>
             </div>
+            <h1 class="mainText">FrontEnd</h1>
+            <div class="frontEnd">
+                <img class="profile" src="https://avatars.githubusercontent.com/u/76980526?v=4" alt="">
+                <div class="introduce">
+                    <div class="name">JGY</div>
+                    <div class="email">jgy_98@naver.com</div>
+                    <div class="tel">010-2037-4553</div>
+                </div>
+            </div>
         </div>
         <b-button v-b-toggle.sidebar-1 class="advertisement">광고문의</b-button>
-        <b-sidebar id="sidebar-1" title="광고 / 개발자 문의" shadow>
+        <b-sidebar id="sidebar-1" title="광고 / 개발자 문의" class="" shadow>
         <div class="px-3 py-2">
             <p>
                 <b-button id="popover-target-1">
@@ -143,7 +143,6 @@ export default {
         right: 0;
         margin-top: 150px;
         margin-right: 30px;
-        
         background-color: #fff;
         color: #333;
     }
@@ -157,7 +156,24 @@ export default {
         border-radius: 10px;
 
     }
-    /* .px-3{
-        display: flex;
-    } */
+/* 반응형 시작(휴대폰 사이즈) */
+@media(max-width: 365px){
+    .inner{
+        width: 365px;
+        height: 0;
+    }
+    .mainText{
+        margin: 20% 5% 5%;
+        font-size: 20px;
+    }
+    .name, .email, .tel{
+        font-size: 15px;
+    }
+    .advertisement{
+        bottom: 150px;
+    }
+    #sidebar-1{
+        height: 100px;
+    }
+}
 </style>
