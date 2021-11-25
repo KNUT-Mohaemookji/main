@@ -163,7 +163,7 @@ export default {
         height: 0;
     }
     .mainText{
-        margin: 20% 5% 5%;
+        margin: 35% 5% 5%;
         font-size: 20px;
     }
     .name, .email, .tel{

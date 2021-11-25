@@ -291,6 +291,7 @@ export default {
     .videoInformations{
         width: 700px;
         height: 250px;
+        margin-left: 20%;
         border-radius: 10px;
         background-color: rgb(238, 235, 235);
     }
@@ -310,16 +311,6 @@ export default {
         position: absolute;
         left: 200px;
         margin: 30px 100px;
-    }
-    .videoInformation:nth-child(4),
-    .videoInformation:nth-child(5),
-    .videoInformation:nth-child(6){
-        position: relative;
-        /* margin-top: 400px;
-        margin-left: 10px; */
-    }
-    .videoInformation{
-        position: relative;
     }
     .videoUser{
         font-size: 12px;
@@ -458,18 +449,21 @@ export default {
         font-size: 12px;
     }
     .menu{
-        margin-left: -45px;
+        margin-left: -10px;
+        font-size: 10px;
+        width: 80px;
     }
     /* section */
     .videoInformations{
         width: 350px;
         height: 150px;
+        margin-left: 7px;
     }
     .videoInformation{
         width: 100px;
         height: 150px;
         left: 30px;
-        bottom: 15px;
+        top: -20px;
     }
     .videoImg{
         width: 120px;
@@ -486,6 +480,7 @@ export default {
     .movie{
         width: 350px;
         height: 500px;
+        top: 20%;
     }
     .movie iframe{
         width: 330px;
@@ -493,7 +488,8 @@ export default {
         margin: 3% 2%;
     }
     .movieDown{
-        display: none;
+        right: -30px;
+        bottom: 10px;
     }
     .inMovieInformation{
         margin: 10px 0;
@@ -517,6 +513,7 @@ export default {
     }
     .collapsed{
         font-size: 12px;
+        margin-top: 20px;
     }
     .videoDetailedDescription{
         width: 320px;

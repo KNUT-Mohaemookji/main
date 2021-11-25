@@ -9,12 +9,6 @@
           <div class="inner">
             <span class="text_firstLine">배고픈데...</span>
             <span class="text_secondLine">모해묵지?!</span>
-            <button class="videoList_button"
-            @click="videoListLink()">
-            영상 보러가기!</button>
-            <button class="about_button"
-            @click="aboutLink()">
-            about</button>
           </div>
         </div>
         <div class="backImg2">
@@ -25,6 +19,17 @@
             <!-- <button class="videoList_button"
             @click="videoListLink()">
             영상 보러가기</button> -->
+          </div>
+        </div>
+        <div class="backImg3">
+          <div class="inner">
+            <div class="text3">요리하러 가기!</div>
+            <button class="videoList_button"
+            @click="videoListLink()">
+            Watch!</button>
+            <button class="about_button"
+            @click="aboutLink()">
+            about</button>
           </div>
         </div>
       </section>
@@ -228,33 +233,47 @@ export default {
 /* 반응형 시작(휴대폰 사이즈) */
 @media(max-width: 365px){
   .body{
-    background-image: none;
-    background-color: antiquewhite;
+    /* background-image: none;
+    background-color: antiquewhite; */
+    background-size: cover;
   }
   .logo{
     width: 50px;
     height: 50px;
   }
-  .backImg2{
-    display: none;
+  .text2{
+    margin: 50% 15%;
+    font-size: 40px;
+  }
+  .bigImage{
+    width: 150px;
+    height: 150px;
+    margin-top: 120%;
+  }
+  .smallImage{
+    width: 100px;
+    height: 100px;
+    margin: 50% 50%;
   }
   .text_firstLine{
-    top: 3%;
+    top: 30%;
     left: 25%;
-    color: #333;
-    font-size: 40px;    
+    font-size: 50px;
   }
   .text_secondLine{
-    top: 3%;
-    left: 22%;
-    color: #333;
-    font-size: 50px;
+    top: 28%;
+    left: 16%;
+    font-size: 60px;
+  }
+  .backImg2{
+
   }
   .videoList_button, .about_button{
     display: block;
     position: absolute;
     bottom: 0;
     right: 0;
+    color: rgb(0, 0, 0);
     margin: 250px 100px;
     border-radius: 10px 10px;
     font-size: 20px;
@@ -263,10 +282,28 @@ export default {
     height: 70px;
     cursor: pointer;
     box-shadow: 3px 3px 3px #333;
-    background-color: #D5A481;
+    /* 버튼 배경 투명하게 해주기 */
+    background-color: transparent; 
   }
   .about_button{
     margin: 150px 100px;
+  }
+  .backImg3{
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://user-images.githubusercontent.com/76980526/143383154-18f43968-0508-48c7-8c54-272d5ae8e9a8.png");
+    background-size: cover;
+  }
+  .text3{
+    position: absolute;
+    text-shadow: 2px 2px 2px #333;;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 700;
+    margin: 120% 7%;
   }
 }
 
