@@ -3,15 +3,6 @@
   @click="menuOff()">
       <header>
         <img src="https://avatars.githubusercontent.com/u/83266629?s=200&v=4" alt="" class="logo">
-        <!-- <div class="menu" @click="menuOn()">
-          ㅡ <br> ㅡ <br> ㅡ
-          <ul>
-            <li class="menu_inner"><a href="../html/VideoList.html">영상 보러가기!</a></li>
-            <li class="menu_inner"><a href="javascript:void(0)">공지사항</a></li>
-            <li class="menu_inner"><a href="../html/about.html">사이트 소개</a></li>
-            <li class="menu_inner"><a href="../html/ask.html">개발자/광고문의</a></li>
-          </ul>
-        </div> -->
       </header>
       <section>
         <div class="backImg1">
@@ -25,9 +16,20 @@
             <div class="text2">오늘은 이거다! <br> 음식을 카테고리 <br> 별로!</div>
             <img src="https://user-images.githubusercontent.com/76980526/127959158-4c0530ec-1873-403c-9221-4fc310be5669.jpeg" alt="" class="bigImage">
             <img src="https://user-images.githubusercontent.com/76980526/127960267-25f47a80-4acf-4afd-91ee-4e853f57e1ba.jpeg" alt="" class="smallImage">
+            <!-- <button class="videoList_button"
+            @click="videoListLink()">
+            영상 보러가기</button> -->
+          </div>
+        </div>
+        <div class="backImg3">
+          <div class="inner">
+            <div class="text3">요리하러 가기!</div>
             <button class="videoList_button"
             @click="videoListLink()">
-            영상 보러가기</button>
+            Watch!</button>
+            <button class="about_button"
+            @click="aboutLink()">
+            about</button>
           </div>
         </div>
       </section>
@@ -74,6 +76,12 @@ export default {
         this.$router.push({
             path : '/videoList'
         })
+    },
+    // about으로 url 이동
+    aboutLink(){
+      this.$router.push({
+        path: '/about'
+      })
     }
   }
 }
@@ -145,7 +153,8 @@ export default {
     color: white;
   }
   /* 화면 로딩되면 위로 올라오게 만들 예정. */
-  .bigImage1{
+  .backImg1{
+
   }
   .text_firstLine{
     position: absolute;
@@ -218,19 +227,84 @@ export default {
   .smallImage.event{
     transform: translateY(50px);
   }
-  .videoList_button{
+  .videoList_button, .about_button{
+    display: none;
+  }
+/* 반응형 시작(휴대폰 사이즈) */
+@media(max-width: 365px){
+  .body{
+    /* background-image: none;
+    background-color: antiquewhite; */
+    background-size: cover;
+  }
+  .logo{
+    width: 50px;
+    height: 50px;
+  }
+  .text2{
+    margin: 50% 15%;
+    font-size: 40px;
+  }
+  .bigImage{
+    width: 150px;
+    height: 150px;
+    margin-top: 120%;
+  }
+  .smallImage{
+    width: 100px;
+    height: 100px;
+    margin: 50% 50%;
+  }
+  .text_firstLine{
+    top: 30%;
+    left: 25%;
+    font-size: 50px;
+  }
+  .text_secondLine{
+    top: 28%;
+    left: 16%;
+    font-size: 60px;
+  }
+  .backImg2{
+
+  }
+  .videoList_button, .about_button{
+    display: block;
     position: absolute;
     bottom: 0;
     right: 0;
-    margin: 100px 100px;
+    color: rgb(0, 0, 0);
+    margin: 250px 100px;
     border-radius: 10px 10px;
-    font-size: 25px;
+    font-size: 20px;
     font-weight: 700;
-    width: 200px;
-    height: 80px;
+    width: 150px;
+    height: 70px;
     cursor: pointer;
-    box-shadow: 5px 5px 5px #333;
-    background-color: #D5A481;
+    box-shadow: 3px 3px 3px #333;
+    /* 버튼 배경 투명하게 해주기 */
+    background-color: transparent; 
+  }
+  .about_button{
+    margin: 150px 100px;
+  }
+  .backImg3{
+    position: relative;
+    z-index: 1;
+    top: 100vh;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://user-images.githubusercontent.com/76980526/143383154-18f43968-0508-48c7-8c54-272d5ae8e9a8.png");
+    background-size: cover;
+  }
+  .text3{
+    position: absolute;
+    text-shadow: 2px 2px 2px #333;;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+    font-weight: 700;
+    margin: 120% 7%;
+  }
 }
 
 </style>
