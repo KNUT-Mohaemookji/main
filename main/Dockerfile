@@ -11,7 +11,7 @@ WORKDIR /usr/local/mohaemookji/
 RUN npm install && npm run build
 
 
-# Main Container
+# Main Container image
 FROM alpine:edge
 # build file loading from builder image
 COPY --from=builder /usr/local/mohaemookji/dist /usr/local/mohaemookji
