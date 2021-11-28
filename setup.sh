@@ -1,8 +1,5 @@
 #!/bin/bash
 
-# ssl authentication file copy to this directory
-sudo cp -r /var/lib/jenkins/workspace/mh-ssl /var/lib/jenkins/workspace/mohaemookji/main
-
 # dockerhub login
 bash /var/lib/jenkins/workspace/mh-login.sh
 

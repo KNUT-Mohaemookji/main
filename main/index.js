@@ -2,7 +2,6 @@ const https = require('https');
 const express = require('express');
 const path = require('path');
 const app = express();
-// const fs = require('fs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const port = 17260;
@@ -12,12 +11,6 @@ mongoose.connect(process.env.MONGODB_CONNECTION || 'mongodb://db:27017/mohaemook
 const db = mongoose.connection;
 db.on('error', err => console.error(`Error on connection:\n${err.message}`));
 db.once('open', () => console.log('Database connected.'));
-
-// SSL authentication
-// const serverOption = {
-//     key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
-//     cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
-// }
 
 // server on
 https.createServer(app).listen(port, () => {
