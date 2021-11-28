@@ -1,34 +1,30 @@
-# **MohaeMookji Project**
-#### 자취생들을 위한 랜덤 요리 추천 웹 사이트
+# *Project Introduce*
+* 무슨 요리를 만들지 고민하는 자취생들을 위한 레시피 추천 웹 사이트
+> 끼니, 간식, 운동식, 다이어트식, 건강식. 5개의 카테고리에 해당하는 유튜브 레시피 영상 10개를 임의로 제공
 
-## **1. 프로젝트 개요**
-> 매끼마다 무슨 요리를 할지 고민하는 자취생들을 위해 유튜브의 다양한 요리영상을 랜덤으로 보여주는 웹 사이트
-## **2. System Archtecture**
->![모해묵지 아키텍처](https://user-images.githubusercontent.com/33280934/129690587-4d290e30-f406-4333-8fc7-de880dba7e48.png)
+<br/>
+ 
+# *Team Members*
+* <H3>Yong Sihun</H3>
+> Team Leader / Infra and Devops Engineer / Back-end Developer (main server)
+* <H3>Lee Jinhyeong</H3>
+> Back-end Developer (youtube video collceting server)
+* <H3>Kim Hanbin</H3>
+> Back-end Developer (video recommand API)
+* <H3>Kim Jaeryeong</H3>
+> Back-end Developer (member management API)
+* <H3>Jeong Gyuyeong</H3>
+> Front-end Developer (design, publish)
 
-## **3. Operational Environment**
-> ### Web Application Server
-> : 클라이언트의 요청을 받아 데이터베이스에 저장된 유튜브 소스코드 영상을 Select하여 동적 웹페이지 반환 (요리추천 페이지)
-> ### API Server
-> : 유튜브에서 크롤링한 영상의 소스코드를 카테고리별로 데이터베이스에 저장
-> ### Database
-> : 간편식, 면요리, 밥요리 등 카테고리 별로 유튜브 영상 소스코드 저장
+<br/>
 
-## **4. Physical Scope**
-> ### 웹페이지  
-> : HTML / CSS / JavaScript  
-> ### 서버  
-> ㆍ인프라 : AWS EC2  
-> ㆍWeb Application Server : NodeJS  
-> ㆍAPI Server : JAVA Script  
-> ㆍDBMS : MongoDB  
-> ㆍContainer : Docker  
-> ### 프로젝트  
-> ㆍ버전관리 : Git Hub  
-> ㆍCI/CD : Git Actions  
-> ㆍ협업도구 : MicrosoftTeams / Azure Boards  / kakaotalk
+# *System Archtecture*
+>![모해묵지 아키텍처](https://user-images.githubusercontent.com/33280934/143732178-c23131a1-25b5-4b3f-9eca-f1657214cf0f.jpg)
+<br/>
 
-## **5. Logical Scope**
-> ### 요리영상 카테고리
-> : 끼니 / 간식 / 다이어트식 / 운동식 / 건강식
+# *CI/CD Pipeline*
+>![모해묵지 파이프라인](https://user-images.githubusercontent.com/33280934/143732573-d23e9aec-7484-4c86-9c0c-89d619990822.jpg)
+<br/>
 
+# *Tech Stack*
+>![tech stack](https://user-images.githubusercontent.com/33280934/143733052-5500e3b0-ae24-44cb-b4b0-61ee97d853d6.jpg)
