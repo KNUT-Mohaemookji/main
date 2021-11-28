@@ -2,7 +2,7 @@ const https = require('https');
 const express = require('express');
 const path = require('path');
 const app = express();
-const fs = require('fs');
+// const fs = require('fs');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const port = 17260;
@@ -13,22 +13,14 @@ const db = mongoose.connection;
 db.on('error', err => console.error(`Error on connection:\n${err.message}`));
 db.once('open', () => console.log('Database connected.'));
 
-// edit : mongoose schema and model define 
-const Data_Schema = new mongoose.Schema({
-    title : {type : String, required: true},
-    thumbnail : {type : String, required: true},
-    link : {type : String, required: true},
-});
-const Noodle_Model = mongoose.model('noodle', Data_Schema);
-
 // SSL authentication
-const serverOption = {
-    key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
-    cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
-}
+// const serverOption = {
+//     key: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/private.key'),
+//     cert: fs.readFileSync('/usr/local/mohaemookji/mh-ssl/certificate.crt'),
+// }
 
 // server on
-https.createServer(serverOption, app).listen(port, () => {
+https.createServer(app).listen(port, () => {
     console.log(`Server Running at ${port}`);
 
     // __dirname = The directory path currently running
