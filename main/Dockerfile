@@ -15,6 +15,8 @@ RUN npm install && npm run build
 FROM alpine:edge
 # build file loading from builder image
 COPY --from=builder /usr/local/mohaemookji/dist /usr/local/mohaemookji
+
+# timezone setting and nodejs, npm install
 WORKDIR /usr/local/mohaemookji
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
     && apk add --update nodejs \

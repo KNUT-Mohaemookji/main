@@ -9,12 +9,14 @@ RUN npm install && npm run build
 
 # API Container
 FROM alpine:edge
-# HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
-#   CMD [ "executable" ]
 LABEL maintainer1="tlgns7386@gmail.com" maintainer2="byaa1972@gmail.com"
 
+# HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \
+#   CMD [ "executable" ]
 # build file loading from builder image
 COPY --from=builder /usr/local/mohaemookji/dist /usr/local/mohaemookji
+
+# timezone setting and nodejs, npm install
 WORKDIR /usr/local/mohaemookji
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
     && apk add --update nodejs \
