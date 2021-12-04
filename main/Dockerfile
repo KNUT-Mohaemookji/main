@@ -4,11 +4,11 @@ COPY . /usr/local/mohaemookji
 
 # frontend library install and build
 WORKDIR /usr/local/mohaemookji/mh-frontend
-RUN npm install && npm run build
+RUN npm install -g && npm run build
 
 # main server library install and build
 WORKDIR /usr/local/mohaemookji/
-RUN npm install && npm run build
+RUN npm install -g && npm run build
 
 
 # Main Container image

@@ -4,7 +4,7 @@ COPY . /usr/local/mohaemookji
 
 # api server library install and build
 WORKDIR /usr/local/mohaemookji/
-RUN npm install && npm run build
+RUN npm install -g && npm run build
 
 
 # API Container
