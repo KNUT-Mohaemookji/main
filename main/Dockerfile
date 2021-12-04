@@ -16,7 +16,7 @@ FROM alpine:edge
 # build file loading from builder image
 COPY --from=builder /usr/local/mohaemookji/dist /usr/local/mohaemookji
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
-    && apk add --update nodejs=16.13.0-r0 \
+    && apk add --update nodejs=16.13.1-r0 \
     && apk add --update npm
 EXPOSE 17260
 ENTRYPOINT ["node", "/usr/local/mohaemookji/main.js"]
