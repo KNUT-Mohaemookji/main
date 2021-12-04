@@ -15,8 +15,9 @@ LABEL maintainer1="tlgns7386@gmail.com" maintainer2="byaa1972@gmail.com"
 
 # build file loading from builder image
 COPY --from=builder /usr/local/mohaemookji/dist /usr/local/mohaemookji
+WORKDIR /usr/local/mohaemookji
 RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
     && apk add --update nodejs \
     && apk add --update npm
 EXPOSE 17260
-ENTRYPOINT ["node", "/usr/local/mohaemookji/main.js"]
+ENTRYPOINT ["node", "main.js"]
