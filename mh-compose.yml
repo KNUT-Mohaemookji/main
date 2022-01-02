@@ -6,7 +6,7 @@ services:
  main:
   image: 2mukee/mh_main_deploy
   ports:
-   - 443:17260
+   - 17260:17260
   environment:
    - TZ=Asia/Seoul
   deploy:
