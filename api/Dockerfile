@@ -14,6 +14,7 @@ RUN ln -sf /usr/share/zoneinfo/Asia/Seoul /etc/localtime \
     && apk add --update npm \
     && npm install && npm run build
 
-WORKDIR /usr/local/mohaemookji/dist
-EXPOSE 17260
-ENTRYPOINT ["node", "main.js"]
+# workdir change for build file execute
+# WORKDIR /usr/local/mohaemookji/dist
+
+ENTRYPOINT ["node", "index.js"]
