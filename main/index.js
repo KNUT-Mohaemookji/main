@@ -1,4 +1,5 @@
 const https = require('https');
+const http = require('http');
 const express = require('express');
 const path = require('path');
 const app = express();
@@ -13,7 +14,7 @@ db.on('error', err => console.error(`Error on connection:\n${err.message}`));
 db.once('open', () => console.log('Database connected.'));
 
 // server on
-https.createServer(app).listen(port, () => {
+http.createServer(app).listen(port, () => {
     console.log(`Server Running at ${port}`);
 
     // __dirname = The directory path currently running
