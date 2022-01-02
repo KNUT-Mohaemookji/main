@@ -13,10 +13,17 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode development",
+    "build": "pkg . --out-path bin",
     "dev": "nodemon ./index.js localhost 17260"
   },
+  "pkg": {
+    "scripts": "*.js",
+    "targets": [
+      "node"
+    ]
+  },
   "devDependencies": {
+    "pkg": "^5.5.1",
     "webpack-cli": "^4.9.1"
   },
   "repository": {
