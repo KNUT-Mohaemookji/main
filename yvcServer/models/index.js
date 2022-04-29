@@ -1,4 +1,4 @@
 module.exports = {
-  Videos  : require('./Videos'),
+  Videos: require('./Videos'),
   Channel: require('./Channel'),
 };

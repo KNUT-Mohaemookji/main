@@ -5,6 +5,7 @@ const envFile = env === 'production' ? '.env' : 'mh.env';
 // Modules
 const { google } = require('googleapis');
 
+// 현재 파일의 Root 위치를 알기 위함
 const fs = require('fs');
 const path = require('path');
 const appRoot = require('app-root-path');
@@ -16,7 +17,6 @@ const models = require('../models');
 const apiCtrl = require('../controller/apiController');
 const dbCtrl = require('../controller/dbController');
 const queryJob = require('../jobs/query');
-
 
 // Business logic
 const fnReqSearchData = async (_youtube, _arrQuery, _vModel) => {
@@ -116,7 +116,7 @@ const fnReqChannelData = async (_youtube, _arrCId) => {
   }
 }
 
-
+//
 const fnRequest = async () => {
   try {
     const youtube = google.youtube('v3');
@@ -124,6 +124,7 @@ const fnRequest = async () => {
     // 검색어 로드
     let qList = queryJob.fnGetQueries();
 
+    // 검색어만 뽑아내기
     const nArrQ = Object.values(qList);
     const nArrQLen = nArrQ.length;
 
@@ -133,6 +134,7 @@ const fnRequest = async () => {
     // 검색어 주제 별로 로직 동작
     const nArrObjVData = [];
 
+    // 검색어를 랜덤하게 섞은 후 
     for (let i=0; i<nArrQLen; ++i) {
       let arrQuery = nArrQ[i];
       queryJob.fnShuffleData(arrQuery);
